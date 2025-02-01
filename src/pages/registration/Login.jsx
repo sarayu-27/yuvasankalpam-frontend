@@ -5,6 +5,7 @@ function Login() {
   const location = useLocation();
   const [inputEmail, setInputEmail] = useState(location.state?.email || "");
   const [inputPassword, setInputPassword] = useState("");
+  const [userType, setUserType] = useState("");
 
   
 
@@ -44,6 +45,14 @@ function Login() {
             required
             className="login-input"
           />
+        </div>
+        <div className="login-form-row">
+          <label htmlFor="user-type" className="login-label">User Type</label>
+          <select name="user-type" value={userType} onChange={(e)=>setUserType(e.target.value)}>
+            <option value="student">Student</option>
+            <option value="faculty">Faculty</option>
+            <option value="admin">Admin</option>
+          </select>
         </div>
         <button type="submit" className="login-button">Login</button>
       </form>
