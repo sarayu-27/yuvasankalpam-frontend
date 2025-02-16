@@ -1,12 +1,18 @@
 import { Link } from "react-router-dom";
 import Menu from './Menu';
 import User from './User';
-import { LOGO } from "../api/data";
+import { LOGO,userType} from "../api/data";
+import { useEffect,useState } from "react";
 
 const Header = ()=> { 
+    const [path,setPath] = useState('');
+    useEffect(()=>{
+        if(userType == 'Faculty') setPath('/student/dashboard') 
+        if(userType == 'Student') setPath('/faculty/dashboard')
+    },[userType])
     return (
         <div className="sts-header">
-            <Link className="sts-logo" to="/student/dashboard">{LOGO}</Link>
+            <Link className="sts-logo" to={path}>{LOGO}</Link>
             <div className="sts-header__menu-container">
                 <Menu/>
             </div>

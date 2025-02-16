@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import { test_results } from "../../api/data";
+import { assessment_report } from "../../api/data";
 
-const TestResults = () => {
+const Report = () => {
   const navigate = useNavigate();
 
   const backToTest = () => {
@@ -11,19 +11,22 @@ const TestResults = () => {
   return (
     <div className="sts-test-results">
       <a onClick={backToTest} className="back-button">← Back</a>
-      
+      <div className="student-details">
+        <span><b>Roll no: </b>{assessment_report.student_id}</span>
+        <span><b>Name: </b>{assessment_report.student_name}</span>
+      </div>
       {/* Score Section */}
       <div className="sts-test-results__card">
-        <div className="test-score"><b>Score - {test_results.score}</b></div>
+        <div className="test-score"><b>Score - {assessment_report.score}</b></div>
         <div className="test-data">
-          <span>Correct - {test_results.correct}</span>
-          <span>Wrong - {test_results.wrong}</span>
-          <span>Not Attempted - {test_results.notAttempted}</span>
+          <span>Correct - {assessment_report.correct}</span>
+          <span>Wrong - {assessment_report.wrong}</span>
+          <span>Not Attempted - {assessment_report.notAttempted}</span>
         </div>
         
         {/* Questions Section */}
         <div className="test-questions">
-          {test_results.questions.map((q, index) => (
+          {assessment_report.questions.map((q, index) => (
             <div key={index} className="question-container">
               <p className="question"><b>{index + 1}. {q.question}</b></p>
               
@@ -83,4 +86,4 @@ const TestResults = () => {
   );
 };
 
-export default TestResults;
+export default Report;

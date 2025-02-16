@@ -3,6 +3,13 @@ export const HEADER_MENU = [
     { label: 'Practice', dropdown: [{label:'Syllabus'},{label:'Test',link:'#'}] },
     { label: 'Assessment'}
 ];
+export const userType = 'Student';
+export const FACULTY_HEADER_MENU = [
+    { label: 'Syllabus'},
+    { label: 'Assessment'},
+    { label: 'Attendance'},
+    { label: 'Reports'},
+];
 
 export const course = {
     "id":"Full Stack Development",
@@ -26,7 +33,11 @@ export const topics = [
     {"id":"strings","topic_name":"Strings","practice_locked":false},
     {"id":"methods","topic_name":"Methods","practice_locked":true}
 ];
-
+export const subTopics = [
+    {"id":1,"topic_id":"arrays","subtopic_name":"Reverse an array"},
+    {"id":2,"topic_id":"arrays","subtopic_name":"Sorting"},
+    {"id":3,"topic_id":"arrays","subtopic_name":"Searching"}
+];
 export const practice_questions = [
     
     {
@@ -215,6 +226,43 @@ export const assessment_questions = {
         {
             "question": "What is the static keyword?",
             "type": "text"
+        }
+    ]
+}
+
+export const faculty_subjects = [
+    {"id":"java","subject":"Java"},
+    {"id":"sql","subject":"SQL"}
+];
+
+export const students = [
+    {"id":1,"rollNo":"A21IT001","name":"Sarayu"},
+    {"id":2,"rollNo":"A21IT002","name":"Rohith"}
+];
+
+
+export const assessment_report = {
+    "student_id":1,
+    "student_name":"Sarayu",
+    "score":"80%",
+    "correct":10,
+    "wrong":10,
+    "notAttempted":10,
+    "questions":[
+        {
+            question:"What is the correct way to declare an integer variable named count with an initial value of 10?",
+            questionType:'mcq',
+            options: ["int count = 10;","integer count = 10;","count = 10;","variable int count = 10;"],
+            selectedAnswer: 2,
+            correctAnswer: 1,
+            explanation: "csgvghgkhl",
+            answerExplanation:"correct way to declare an integer variable named count with an initial value of 10 is int count=10"
+        },
+        {
+            question:"What is the correct way to declare an integer variable named count with an initial value of 10?",
+            questionType:'text',
+            explanation: "csgvghgkhl",
+            answerExplanation:"correct way to declare an integer variable named count with an initial value of 10 is int count=10"
         }
     ]
 }

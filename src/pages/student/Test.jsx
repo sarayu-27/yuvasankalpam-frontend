@@ -56,7 +56,7 @@ const Test = () => {
                 <div key={topic.id} className={`sts-test__topic ${(topic.isLocked) ?  'disabled' : ''} ${topic.isCompleted? 'completed':''}`}>
                  <button className='sts-test__topic-button'>{topic.topic}</button>
                 {(topic.isLocked) ? (
-                <button className='sts-test__topic-test' disabled>Locked<i className='material-icons'>lock</i></button>
+                <button className='sts-test__topic-test' disabled>Locked<i className='material-icons-outlined'>lock</i></button>
                 ) : topic.isCompleted ? (
                 <button className='sts-test__topic-test'>Finished</button>
             ):<button className='sts-test__topic-test' onClick={() => handleTopicClick(topic)}>Take Test</button> }

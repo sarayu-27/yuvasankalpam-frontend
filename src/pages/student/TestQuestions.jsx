@@ -86,7 +86,7 @@ const TestQuestions = () => {
       <div className="quiz-container">
         {/* Header: Timer & Close Button */}
         <div className="quiz-header">
-          <i className="material-icons" style={{ color: "red", cursor: "pointer" }} onClick={handleSubmit}>close</i>
+          <i className="material-icons-outlined" style={{ color: "red", cursor: "pointer" }} onClick={handleSubmit}>close</i>
         </div>
         <div style={{ display: "flex", justifyContent: "center" }}>
           <span className="timer">Time Remaining: <b>{formatTime(timeLeft)}</b></span>

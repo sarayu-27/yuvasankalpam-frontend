@@ -68,7 +68,7 @@ const Syllabus = () => {
                     onClick={() => {onTopicClick(item.id);setTopicName(item.topic_name)}}
                     className={`${item.practice_locked ? "disabled": ""} ${highlightedTopic === item.id ? "highlighted" : ""}`} 
                   >
-                    {item.topic_name} { item.practice_locked ? <i className="material-icons">lock</i> : <></>}
+                    {item.topic_name} { item.practice_locked ? <i className="material-icons-outlined">lock</i> : <></>}
                   </li>
                 ))}
             </ul>

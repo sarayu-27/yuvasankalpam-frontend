@@ -4,6 +4,8 @@ import storage from 'redux-persist/lib/storage';
 import courseReducer from './slices/courseSlice';
 import errorReducer from './slices/errorSlice';
 import topicReducer from './slices/topicSlice';
+import subjectReducer from "./slices/subjectSlice";
+import assessmentReducer from "./slices/assessmentSlice";
 
 
 // Combine all reducers
@@ -11,13 +13,15 @@ const rootReducer = combineReducers({
   course: courseReducer,
   error: errorReducer,
   topic: topicReducer,
+  subject: subjectReducer,
+  assessment: assessmentReducer
 });
 
 // Configure persistence
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['course','error','topic'], // Persist only these slices
+  whitelist: ['course','error','topic','subject','assessment'], // Persist only these slices
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

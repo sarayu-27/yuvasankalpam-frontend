@@ -1,0 +1,18 @@
+{
+    "test_id":1,
+    "test_name":"java",
+    "responses":50,
+    "averageScore":"40%",
+    "studentsData": [
+        {
+            "rollNo": 1,
+            "name":"Rohith",
+            "score":"70%"
+        },
+        {
+            "rollNo": 2,
+            "name":"Sarayu",
+            "score":"75%"
+        }
+    ]
+} 

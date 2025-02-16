@@ -1,4 +1,9 @@
 .sts-test-results {
+   .student-details {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
     margin: 20px;
     a {
         color:#06959D;

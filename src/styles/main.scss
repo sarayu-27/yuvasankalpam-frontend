@@ -11,6 +11,14 @@
 @use './TestQuestions.scss';
 @use './TestResults.scss';
 @use './Assessment.scss';
+@use './FacultySyllabus.scss';
+@use './Attendance.scss';
+@use './FacultyAssessment.scss';
+@use './TestCreation.scss';
+@use './Settings.scss';
+@use './TestCard.scss';
+@use './ViewQuestions.scss';
+@use './Results.scss';
 
 body {
    margin: 0;
@@ -49,4 +57,13 @@ body {
     background: #EDF4F4;
 }
 
-
+.sts-search {
+    padding: 8px; 
+    margin-bottom: 10px;
+    border-radius:8px;
+    border: 1px solid #cccccc;
+    &:focus-visible {
+        outline:none;
+        border: 1px solid #7239a4;
+    }
+}

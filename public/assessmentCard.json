@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "testTitle": "Java",
+      "description": "Questions on Strings,Arrays",
+      "subject_id":"java",
+      "questions": [
+        {
+          "id": 101,
+          "text": "What is the capital of India?",
+          "type": "choice",
+          "multipleAnswers": false,
+          "required": true,
+          "options": [
+            { "id": 1, "text": "Delhi", "correct": true },
+            { "id": 2, "text": "London", "correct": false },
+            { "id": 3, "text": "Berlin", "correct": false }
+          ]
+        },
+        {
+          "id": 102,
+          "text": "What is 2 + 2?",
+          "type": "text",
+          "correctAnswer": "4",
+          "required": true
+        }
+      ],
+      "schedule": {
+        "duration": 50,
+        "endDate":"2025-02-02",
+        "endTime":"23:04",
+        "message":"Your response is submitted",
+        "startDate": "2025-02-02",
+        "startTime":"22:34"
+      },
+      "responses":5
+    },
+    {
+      "id": 2,
+      "testTitle": "SQL",
+      "description": "Questions on Queries",
+      "subject_id":"sql",
+      "questions": [
+        {
+          "id": 101,
+          "text": "What is the capital of India?",
+          "type": "choice",
+          "multipleAnswers": false,
+          "required": true,
+          "options": [
+            { "id": 1, "text": "Delhi", "correct": true },
+            { "id": 2, "text": "London", "correct": false },
+            { "id": 3, "text": "Berlin", "correct": false }
+          ]
+        },
+        {
+          "id": 102,
+          "text": "What is 2 + 2?",
+          "type": "text",
+          "correctAnswer": "4",
+          "required": true
+        }
+      ],
+      "schedule": {
+        "duration": 30,
+        "endDate":"2025-02-02",
+        "endTime":"23:04",
+        "message":"Your response is submitted",
+        "startDate": "2025-02-02",
+        "startTime":"22:34"
+      },
+      "responses":0
+    }
+  ]
+  

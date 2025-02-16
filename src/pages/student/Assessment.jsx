@@ -1,9 +1,13 @@
 import { useState } from "react";
 import { assessment } from "../../api/data";
+import { useNavigate } from "react-router-dom";
 //make subjects dynamic...based on subjects retrieve data
 const Assessment = () => {
     const [activeTab, setActiveTab] = useState("inProgress");
-
+    const navigate = useNavigate();
+    // const openTest = (id)=> {
+    //   navigate(`/student/questions/${id}`)
+    // }
     return (
       <div className="sts-student-assessment">
         <div className="header">
@@ -33,15 +37,15 @@ const Assessment = () => {
                 <div className="test-card-header">
                   <p className="test-title">{test.test_title}</p>
                   <div className="test-content">
-                    <p><i className="material-icons">library_books</i>  {test.total_questions} Questions</p>
-                    <p><i className="material-icons">schedule</i>  {test.time}</p>
+                    <p><i className="material-icons-outlined">library_books</i>  {test.total_questions} Questions</p>
+                    <p><i className="material-icons-outlined">schedule</i>  {test.time}</p>
                   </div>
                 </div>
               </div>
               {test.completed ? (
                   <button className="view-results" onClick={() => alert("Viewing results")}>View results</button>
                 ) : (
-                  <button className="take-test" onClick={() => alert("Opening test")}>Take Test</button>
+                  <button className="take-test" onClick={() => openTest(test.id)}>Take Test</button>
                 )}
               </div>
             ))}
