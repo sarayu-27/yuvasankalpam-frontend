@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
+  import PropTypes from 'prop-types';
 
-const Layout2 = ({ children }) => {
-  return <div className="sts">{children}</div>;
-};
+  const Layout2 = ({ children }) => {
+    return <div className="sts">{children}</div>;
+  };
 
-Layout2.propTypes = {
-  children: PropTypes.any
-};
+  Layout2.propTypes = {
+    children: PropTypes.any
+  };
 
-export default Layout2;
+  export default Layout2;
